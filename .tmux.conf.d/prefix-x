@@ -1,0 +1,2 @@
+set -g prefix C-x
+bind-key C-x send-prefix
