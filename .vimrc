@@ -11,9 +11,12 @@ colorscheme elflord
 autocmd BufRead,BufNewFile *.ino set filetype=cpp
 syntax on
 
-let skip_defaults_vim=1
+let skip_defaults_vim = 1
 let GtagsCscope_Auto_Load = 1
 let GtagsCscope_Auto_Map = 1
+let g:winresizer_vert_resize = 1
+let g:winresizer_horiz_resize = 1
+let g:winresizer_start_key = '<C-W><C-W>'
 
 if !isdirectory('~/.vim/bundle/')
   call system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
@@ -25,6 +28,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
   Plugin 'editorconfig/editorconfig-vim'
+  Plugin 'simeji/winresizer'
 call vundle#end()
 filetype plugin indent on
 
