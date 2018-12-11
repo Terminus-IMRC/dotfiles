@@ -1,8 +1,9 @@
 # ~/.bash_aliases
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
 alias gf=fg
 
 alias ls='ls -p --color'
@@ -20,18 +21,6 @@ alias crontab='crontab -i'
 alias -- ':w=sync'
 alias doodle='ping crosschannel-game.com'
 alias sudo='sudo env LD_LIBRARY_PATH=$LD_LIBRARY_PATH PATH=$PATH'
-
-alias g=git
-alias s='git status'
-alias d='git diff'
-alias b='git branch'
-alias r='git remote'
-
-case "$(uname -s)" in
-    Linux)
-        alias apt-get='sudo apt-get'
-        ;;
-esac
 
 urlencode() {
     nkf -WwMQ | tr = % | sed -e 's/%20/+/g' -e 's/%2E/./g'
