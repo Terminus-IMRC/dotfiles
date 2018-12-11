@@ -22,8 +22,8 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-if [ -f "~/.bash_aliases" ]; then
-    . ~/.bash_aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+    . "$HOME/.bash_aliases"
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -47,8 +47,8 @@ if ! shopt -oq posix; then
     unset d
 fi
 
-if [ -d "~/.bashrc.d" ]; then
-    for i in ~/.bashrc.d/*.sh; do
+if [ -d "$HOME/.bashrc.d" ]; then
+    for i in $HOME/.bashrc.d/*.sh; do
         if [ -r "$i" ]; then
             . "$i"
         fi
