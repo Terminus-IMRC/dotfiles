@@ -26,7 +26,7 @@ done
 unset preficies prefix
 case "$uname" in
     Linux)
-        PATH="$PATH:/usr/games"
+        PATH="$PATH:/usr/local/games:/usr/games"
         ;;
     Darwin)
         PATH="/usr/local/opt/libexec/gnubin:$PATH"
