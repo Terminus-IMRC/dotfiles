@@ -28,6 +28,10 @@ case "$uname" in
 	Linux)
 		PATH="$PATH:/usr/games"
 		;;
+    Darwin)
+        PATH="/usr/local/opt/libexec/gnubin:$PATH"
+        MANPATH="/usr/local/opt/libexec/gnuman:$MANPATH"
+        ;;
 esac
 export PATH LD_LIBRARY_PATH PKG_CONFIG_PATH MANPATH
 
