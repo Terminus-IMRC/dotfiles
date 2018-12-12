@@ -14,7 +14,7 @@ unset PATH LD_LIBRARY_PATH PKG_CONFIG_PATH MANPATH
 preficies="$HOME/.local/local $HOME/.local"
 case "$uname" in
     Darwin)
-        preficies="$preficies /opt/X11 /usr/local/opt"
+        preficies="$preficies /opt/X11"
         ;;
 esac
 for prefix in "" "/usr" "/usr/local" $preficies; do
@@ -26,12 +26,19 @@ done
 unset preficies prefix
 case "$uname" in
     Linux)
-        PATH="$PATH:/usr/local/games:/usr/games"
+        PATH="$PATH:/usr/games"
         ;;
     Darwin)
-        PATH="/usr/local/opt/libexec/gnubin:$PATH"
-        MANPATH="/usr/local/opt/libexec/gnuman:$MANPATH"
-    ;;
+        for pkg in /usr/local/opt/*; do
+            if [ -d "$pkg/libexec/gnubin" ]; then
+                PATH="$pkg/libexec/gnubin:$PATH"
+            fi
+            if [ -d "$pkg/libexec/gnuman" ]; then
+                MANPATH="$pkg/libexec/gnuman:$MANPATH"
+            fi
+        done
+        unset pkg
+        ;;
 esac
 export PATH LD_LIBRARY_PATH PKG_CONFIG_PATH MANPATH
 
