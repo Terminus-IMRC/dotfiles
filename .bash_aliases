@@ -9,6 +9,7 @@ alias gf=fg
 alias ls='ls -p --color'
 alias ll='ls -l'
 alias la='ls -a'
+alias lla='ls -la'
 alias l='ls'
 alias vi=vim
 alias view='vim -R'
