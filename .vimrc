@@ -29,6 +29,8 @@ call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'simeji/winresizer'
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 
