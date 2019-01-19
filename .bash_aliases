@@ -11,6 +11,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias l='ls'
 alias vi=vim
+alias view='vim -R'
 alias df='df -h'
 alias du='du -h'
 alias grep='grep --color'
