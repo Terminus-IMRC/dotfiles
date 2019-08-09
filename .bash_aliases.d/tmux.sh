@@ -5,6 +5,6 @@ ta() {
     if tmux has-session -t "$S" >/dev/null 2>/dev/null; then
         tmux attach-session -d -t "$S"
     else
-        tmux new-session -s "$S"
+        tmux -2 new-session -s "$S"
     fi
 }
