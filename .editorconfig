@@ -12,7 +12,7 @@ indent_size = 4
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{c,cpp,h,hpp,py}]
+[*.{c,cu,cpp,h,hpp,py,sh}]
 indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
