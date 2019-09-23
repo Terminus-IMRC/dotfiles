@@ -6,9 +6,10 @@ uname="$(uname -s)"
 umask 022
 
 LANG="en_US.UTF-8"
+LC_CTYPE="$LANG"
 PAGER="less"
 EDITOR="vim"
-export LANG PAGER EDITOR
+export LANG LC_CTYPE PAGER EDITOR
 
 unset PATH LD_LIBRARY_PATH PKG_CONFIG_PATH MANPATH
 preficies="$HOME/.local/local $HOME/.local"
