@@ -30,7 +30,6 @@ call vundle#begin()
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'simeji/winresizer'
   Plugin 'airblade/vim-gitgutter'
-  Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 
