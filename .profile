@@ -43,6 +43,13 @@ case "$uname" in
 esac
 export PATH LD_LIBRARY_PATH PKG_CONFIG_PATH MANPATH
 
+if [ -d ~/.venv ]; then
+    export VIRTUAL_ENV_DISABLE_PROMPT=1
+    source ~/.venv/bin/activate
+else
+    echo "warning: ~/.venv does not exist; skipping sourcing it"
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if exists
