@@ -7,13 +7,15 @@ call plug#begin()
 call plug#end()
 
 set number
+set noruler
+set noshowcmd
 set textwidth=80
 set colorcolumn=+1
 set formatoptions-=t
 
-colorscheme desert
+colorscheme elflord
 
-nnoremap <Leader> <Cmd>nohlsearch<CR>
+nnoremap <Leader><Leader> <Cmd>nohlsearch<CR>
 
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
@@ -28,11 +30,11 @@ let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 let g:winresizer_start_key = '<C-W><C-W>'
 
-augroup HighlightCursor
-  autocmd!
-  autocmd WinLeave * set nocursorline nocursorcolumn
-  autocmd WinEnter,VimEnter * set cursorline cursorcolumn
-augroup END
+" 232 - 255 maps to black to white.
+highlight CursorLine cterm=NONE ctermbg=233
+highlight CursorColumn cterm=NONE ctermbg=233
+
+nnoremap <C-C> <Cmd>set cursorline! cursorcolumn!<CR>
 
 nnoremap <M-h> <Cmd>wincmd h<CR>
 nnoremap <M-j> <Cmd>wincmd j<CR>
@@ -41,6 +43,8 @@ nnoremap <M-l> <Cmd>wincmd l<CR>
 
 nnoremap <M-S-h> gT
 nnoremap <M-S-l> gt
+
+nnoremap <Leader>b <Cmd>buffers<CR>:buffer<Space>
 
 autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
